@@ -146,8 +146,8 @@ include:
   - _pages
   - files
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
+  # - "*.sublime-project"
+  # - "*.sublime-workspace"
   - .asset-cache
   - .bundle
   - .jekyll-assets-cache
@@ -273,6 +273,7 @@ defaults:
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  sourcemap: never
 
 
 # Outputting
@@ -289,6 +290,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-polyglot
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
@@ -297,6 +299,10 @@ whitelist:
   - jekyll-feed
   - jemoji
 
+languages: ["en", "es"]
+default_lang: "en"
+exclude_from_localization: ["assets/css", "assets/img"]
+parallel_localization: false # false windows machine
 
 # Archives
 #  Type
